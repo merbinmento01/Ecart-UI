@@ -1,0 +1,28 @@
+
+.head-nav{
+  height: 100%;
+  background-color: #236574d1;
+  color: aliceblue;
+
+}
+.logo {
+  display: flex;
+  align-items: end;
+  padding: 15px 15px;
+  height: inherit;
+  img {
+    height: 70px;
+    transition: 1.0s;
+  }
+  h1{
+    margin-left: 15px;
+    font-family: fantasy;
+    font-style: italic;
+  }
+}
+
+.logo {
+  img:hover {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,28 @@
+<div class="login">
+  <div class="wrapper">
+    <div class="login-content">
+      <div class="header">
+        <h1> Welcome</h1>
+        <div class="logo">
+          <img src="../../../assets/fur-logo.png">
+        </div>
+      </div>
+      <div class="log">
+        <form class="login-from" [formGroup]="loginForm">
+          <div class="pb-4">
+            <label for="email">Email:</label>
+            <input type="email" name="email" formControlName="email"/>
+          </div>
+          <div class="pb-4">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" formControlName="password"/>
+          </div>
+          <div class="button">
+            <button type="submit" (click)="onSubmit()">Submit</button>
+            <button>SignUp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

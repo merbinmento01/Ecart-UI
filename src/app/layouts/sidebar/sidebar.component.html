@@ -1,0 +1,14 @@
+<div class="side" (mouseenter)="toogle = true" (mouseleave)="toogle = false">
+  <div class="toggle-btn">
+    <div class="list">
+      <ul>
+        <li class="item" *ngFor="let list of sideList" [routerLinkActive]="['active']" (click)="route(list.route)">
+          <a [routerLink]="[list?.routePath]">
+            <i class="{{list?.icon}}"></i>
+            <span *ngIf="toogle">{{list?.label}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
