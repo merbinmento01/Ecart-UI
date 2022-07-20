@@ -22,9 +22,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe( res=> {
-        this.router.navigate(['/admin', res]);
-      })
+      this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
     } else {
       alert('Please Enter valid details');
     }

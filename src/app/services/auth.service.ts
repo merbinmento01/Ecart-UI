@@ -29,13 +29,15 @@ export class AuthService {
   }
 
   login(email: any, password: any) {
-    this.http.get(`${environment.baseURL}/users/login?email=${email}&pasword=${password}`).subscribe(res => {
-      console.log(res);
+    this.http.get(`${environment.baseURL}/users/login?email=${email}&password=${password}`).subscribe((res: any) => {
+      if (res?.status_code === 200) {
+        this.setToken(res?.accessToken);
+        this.router.navigate(['/admin', res])
+      }
+      return throwError(new Error('Failed to Login'));
+    }, (err)=> {
+      console.log("Failed to Login");
+      ;
     })
-    if( email === 'c.mirande@safilaf.com' && password === '123456a') {
-      this.setToken('adsdasdfdsgsdfdfgdfgdfgdfgdfgdasdvcvcfgerge');
-      return of({name: 'Safilaf', email: 'c.mirande@safilaf.com'})
-    }
-    return throwError(new Error('Failed to Login'));
   }
 }
