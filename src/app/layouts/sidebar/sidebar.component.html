@@ -2,11 +2,15 @@
   <div class="toggle-btn">
     <div class="list">
       <ul>
-        <li class="item" *ngFor="let list of sideList" [routerLinkActive]="['active']" (click)="route(list.route)">
+        <li class="item" *ngFor="let list of sideList" [routerLinkActive]="list?.route !=='none' ? ['active'] : ['']" (click)="route(list.route)">
+          <b class="top-b"></b>
+          <b class="top-f"></b>
           <a [routerLink]="[list?.routePath]">
             <i class="{{list?.icon}}"></i>
             <span *ngIf="toogle">{{list?.label}}</span>
           </a>
+          <b class="bottom-b"></b>
+          <b class="bottom-f"></b>
         </li>
       </ul>
     </div>
