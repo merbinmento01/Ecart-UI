@@ -12,10 +12,10 @@ const routes: Routes = [
     canActivate: [LoginGuardGuard],
     component: AdminComponent,
     children: [
-      // {
-      //   path: '',
-      //   canActivate: [LoginGuardGuard],
-      // },
+      {
+        path: '',
+        loadChildren: ()=> import('src/app/routes/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
       {
         path: 'dashboard',
         loadChildren: ()=> import('src/app/routes/dashboard/dashboard.module').then(m => m.DashboardModule)

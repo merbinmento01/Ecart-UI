@@ -1,0 +1,35 @@
+.dashboard-data {
+  padding: 25px;
+  height: 100%;
+  overflow: auto;
+}
+
+.dashboard-data::-webkit-scrollbar {
+width: 10px;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  // background: #888;
+  // border: none;
+  // border-radius: 10px;
+  display: none;
+}
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+
+.card {
+  height: 300px;
+  background: white;
+  box-shadow: 0 5px 15px rgb(75 129 141 / 54%);
+}

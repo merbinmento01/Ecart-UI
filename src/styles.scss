@@ -11,3 +11,11 @@ body {
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #fff inset!important;
+  -webkit-text-fill-color: #333;
+}
+
+input:focus-visible {
+  outline: none;
+}
