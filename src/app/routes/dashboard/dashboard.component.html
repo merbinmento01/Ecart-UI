@@ -3,8 +3,22 @@
   <div class="content">
     <div class="card" *ngFor="let item of items">
       <div class="card-content">
-        {{item.sno}}
+        <div class="card-label">
+          {{item?.label | titlecase}}
+          <p>Asdasdadsas</p>
+        </div>
+        <div class="card-price">
+          ₹ {{item?.price}}
+        </div>
+        <button class="shop">SHOP NOW</button>
       </div>
+        <div class="img-url" style="background: url({{item?.url}});">
+          <!-- <img src="{{item?.url}}"> -->
+        </div>
+      <!-- <div class="cart-btn">
+        <button class="cart-add">Add to Cart</button>
+        <button class="cart-buy">Buy Now</button>
+      </div> -->
     </div>
   </div>
 </div>
