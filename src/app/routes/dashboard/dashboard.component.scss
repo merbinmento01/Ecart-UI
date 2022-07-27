@@ -1,5 +1,4 @@
 .dashboard-data {
-  padding: 25px;
   height: 100%;
   overflow: auto;
 }
@@ -28,7 +27,7 @@ width: 10px;
   padding: 20px 30px;
   height: 200px;
   background: white;
-  box-shadow: 0 5px 15px rgb(75 129 141 / 54%);
+  box-shadow: 0 5px 8px rgb(75 129 141 / 40%);
   font-size: 25px;
   font-family: 'Lobster', cursive;
   font-weight: 600;
@@ -80,29 +79,6 @@ width: 10px;
   //   width: 100%;
   // }
 }
-
-.cart-btn {
-  button {
-    width: 100%;
-    margin: 5px 0px;
-    font-size: 15px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    height: 35px;
-    /* align-items: center; */
-    text-align: center;
-  }
-
-  .cart-buy {
-    background-color: forestgreen;
-  }
-
-  .cart-add {
-    background-color: coral;
-  }
-}
-
 
 .card:hover {
   border: solid 2px #4b818d;

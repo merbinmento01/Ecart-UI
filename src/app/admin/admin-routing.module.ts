@@ -1,5 +1,3 @@
-import { AdminModule } from './admin.module';
-import { OrdersModule } from './../routes/orders/orders.module';
 import { LoginGuardGuard } from './../guards/login-guard.guard';
 import { LoginComponent } from '../routes/login/login.component';
 import { AdminComponent } from './admin.component';
@@ -9,13 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '',
-    canActivate: [LoginGuardGuard],
+    // canActivate: [LoginGuardGuard],
     component: AdminComponent,
     children: [
-      {
-        path: '',
-        loadChildren: ()=> import('src/app/routes/dashboard/dashboard.module').then(m => m.DashboardModule)
-      },
       {
         path: 'dashboard',
         loadChildren: ()=> import('src/app/routes/dashboard/dashboard.module').then(m => m.DashboardModule)
@@ -38,7 +32,8 @@ const routes: Routes = [
       },
     ]},
   {path: 'login', component: LoginComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: '**', redirectTo: '', pathMatch: 'full'},
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
 @NgModule({

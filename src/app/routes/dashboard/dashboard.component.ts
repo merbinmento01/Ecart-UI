@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class DashboardComponent implements OnInit {
 
   items:any ;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.items = [
@@ -26,6 +27,10 @@ export class DashboardComponent implements OnInit {
       {sno: '11', label: 'Table-11', price: '2500', url: 'https://m.media-amazon.com/images/I/61mzStPa9dL._SL1500_.jpg'},
       {sno: '12', label: 'Table-12', price: '2500', url: 'https://m.media-amazon.com/images/I/61mzStPa9dL._SL1500_.jpg'},
       ];
+  }
+
+  shop(id: string) {
+    this.route.navigate(['dashboard/details', id])
   }
 
 }
