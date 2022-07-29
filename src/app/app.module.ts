@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './routes/login/login.component';
 import { ProductDetailsComponent } from './routes/product-details/product-details.component';
+import { AngularSvgIconModule } from 'angular-svg-icon'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductDetailsComponent } from './routes/product-details/product-detail
     ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularSvgIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

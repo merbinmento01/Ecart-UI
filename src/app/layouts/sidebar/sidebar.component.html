@@ -1,5 +1,5 @@
 <div class="side" (mouseenter)="toogle = true" (mouseleave)="toogle = false">
-  <div class="toggle-btn">
+  <div class="toggle-btn scroll">
     <div class="list">
       <ul>
         <li class="item" *ngFor="let list of sideList" [routerLinkActive]="list?.route !=='logout' ? ['active'] : ['']" (click)="route(list.route)">

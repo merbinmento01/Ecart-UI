@@ -8,7 +8,7 @@
   z-index: 1;
   border-radius: 15px;
   padding: 20px 0px;
-  margin: 15px 10px 10px 10px;
+  margin: 15px 0px 10px 10px;
 
   i {
     display: flex;
@@ -108,4 +108,12 @@
   left: 75%;
   border-top-right-radius:10px;
   background-color: #4b818d;
+}
+.scroll {
+  height: 98%;
+  overflow: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
 }
