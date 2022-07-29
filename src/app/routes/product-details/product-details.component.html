@@ -13,7 +13,11 @@
       </div>
     </div>
     <div class="prod-bsc-cnt col-sm-6">
-      <h1>TableOne</h1>
+      <div class="head">
+        <h1>TableOne</h1>
+        <i class="fa fa-heart-o" *ngIf="!toogleWish" aria-hidden="true" (click)="toogleWish = !toogleWish"></i>
+        <svg-icon [class]="'svg'" *ngIf="toogleWish" src="../../../assets/red-heart-icon.svg" (click)="toogleWish = !toogleWish"></svg-icon>
+      </div>
       <p>A unit which has comfort and contains asdas asdasdasdas fgjgfhsddfhb gffgnbDZXfs sdfFETRVDF fgdfgg gdhdghfdghsad adsjflsdkaf asfkhasdjkfh dsfkjahf.</p>
       <h2>₹ 42,500</h2>
       <div class="rating">
@@ -33,6 +37,18 @@
       <div class="buy">
         <button class="btn">Buy Now</button>
         <button class="btn">Add to Basket</button>
+      </div>
+      <div class="chk-loc">
+        <h5>Check Location:</h5>
+        <input type="text">
+        <i class="bi bi-search"></i>
+      </div>
+      <div class="chk-loc">
+        <h5>Delivery Charges: ₹50</h5>
+      </div>
+      <div class="casback">
+        <label>7 days Cashback</label>
+        <label>1 Year Warranty</label>
       </div>
     </div>
   </div>
