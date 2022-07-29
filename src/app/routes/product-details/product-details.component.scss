@@ -53,6 +53,18 @@
     h2 {
       font-family: 'Edu VIC WA NT Beginner', cursive;
     }
+
+    .buy {
+      padding: 20px 0px;
+
+      .btn {
+        margin-right: 50px;
+        background-color: #4b818d;
+        color: white;
+        font-size: 20px;
+        padding: 15px 50px;
+      }
+    }
   }
 
   .rating .checked {
@@ -60,7 +72,7 @@
   }
 
   .circle .fa-circle {
-    margin: 10px;
+    margin: 10px 20px 10px 0px;
     font-size: 35px;
   }
 }
