@@ -1,13 +1,14 @@
-import { LoginGuardGuard } from './../guards/login-guard.guard';
 import { LoginComponent } from '../routes/login/login.component';
 import { AdminComponent } from './admin.component';
+import { LoginGuardGuard } from '../guards/login-guard.guard';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   { path: '',
-    // canActivate: [LoginGuardGuard],
+    canActivate: [LoginGuardGuard],
     component: AdminComponent,
     children: [
       {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'orders',
         loadChildren: ()=> import('src/app/routes/orders/orders.module').then(m => m.OrdersModule)
+      },
+      {
+        path: 'chat',
+        loadChildren: ()=> import('src/app/routes/chat/chat.module').then(m => m.ChatModule)
       },
       {
         path: 'settings',
@@ -32,8 +37,7 @@ const routes: Routes = [
       },
     ]},
   {path: 'login', component: LoginComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'},
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'}
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

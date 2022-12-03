@@ -20,3 +20,15 @@ input:-webkit-autofill {
 input:focus-visible {
   outline: none;
 }
+
+h4 {
+  margin: 0;
+}
+
+// ::-webkit-scrollbar-thumb {
+//   display: none;
+// }
+
+::-webkit-scrollbar {
+  width: 10px;
+  }

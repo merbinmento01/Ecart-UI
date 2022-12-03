@@ -20,6 +20,7 @@ export class SidebarComponent implements OnInit {
       {label:'Dashboard', icon: 'bi bi-grid-fill', routePath: 'dashboard'},
       {label:'Whislist', icon: 'bi bi-bag-heart', routePath: 'wishList'},
       {label:'Orders', icon: 'bi bi-basket3', routePath: 'orders'},
+      {label:'Chat', icon: 'bi bi-chat-left', routePath: 'chat'},
       {label:'Address', icon: 'bi bi-bullseye', routePath: 'settings'},
       {label:'Account', icon: 'bi bi-person-circle', routePath: 'settings'},
       {label:'About', icon: 'bi bi-journal-text', routePath: 'about'},

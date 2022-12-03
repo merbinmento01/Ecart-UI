@@ -7,6 +7,7 @@ import { LayoutModule } from '../layouts/layout.module';
 import { DashboardModule } from '../routes/dashboard/dashboard.module';
 import { WishListModule } from '../routes/wish-list/wish-list.module';
 import { OrdersModule } from '../routes/orders/orders.module';
+import { ChatModule } from '../routes/chat/chat.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { OrdersModule } from '../routes/orders/orders.module';
     LayoutModule,
     DashboardModule,
     WishListModule,
-    OrdersModule
+    OrdersModule,
+    ChatModule
   ]
 })
 export class AdminModule { }

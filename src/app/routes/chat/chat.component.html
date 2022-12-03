@@ -1,0 +1,37 @@
+<div class="chat">
+  <div class="cont-lt col-sm-3">
+    <div class="header">
+      <h1>Menu</h1>
+    </div>
+    <div class="contacts">
+    <div class="cont-list" (click)="openContact(contact)" *ngFor="let contact of contactList">
+      <img class="cont-img" src="assets/contact.jpg" alt="">
+      <h4>{{ contact?.name ? contact.name : contact?.firstName ? contact.firstName : contact.agencyId}}</h4>
+    </div>
+  </div>
+  </div>
+  <div class="msg-rt col-sm-9">
+    <div class="header">
+      <img class="cont-img" src="assets/contact.jpg" alt="">
+      <h1>{{activeContact==null? 'No name' : activeContact?.name ? activeContact.name : activeContact?.firstName ?
+         activeContact.firstName : activeContact.agencyId}}</h1>
+    </div>
+    <div class="msg-body" #messagebody>
+      <div class="empty-bdy" *ngIf="activeContact==null">
+        <span>Start chatting here...</span>
+      </div>
+      <div *ngIf="activeContact!=null">
+        <div class="msg" *ngFor="let msg of activeContactMessages; let i=index;">
+          <div class="sender-msg" id= {{i}} *ngIf="msg?.senderId==userData?.id"><p>{{msg.message}}</p></div>
+          <div class="recieve-msg" id= {{i}} *ngIf="msg?.senderId!=userData?.id"><p>{{msg.message}}</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-box">
+      <input class="typebox" type="textarea" placeholder="type your text here..." [(ngModel)]="message" (keyup.enter)="sendMsg()">
+      <button class="send" (click)="sendMsg()">
+        <i class="bi bi-send send-btn"></i>
+      </button>
+    </div>
+  </div>
+</div>

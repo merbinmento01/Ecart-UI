@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +12,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './routes/login/login.component';
 import { ProductDetailsComponent } from './routes/product-details/product-details.component';
-import { AngularSvgIconModule } from 'angular-svg-icon'
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon'
     HttpClientModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AngularSvgIconModule.forRoot()
   ],
   providers: [],
